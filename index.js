@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const morgan = require("morgan");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -31,7 +30,7 @@ const runServer = async () => {
   });
   //<db
 
-  app.use(morgan(`:method :url :status :response-time`));
+
   app.use(cors());
   app.use(cookieParser());
   app.use(bodyParser.json());
